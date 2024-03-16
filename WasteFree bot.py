@@ -4,8 +4,7 @@ from openai import OpenAI
 import requests
 from bs4 import BeautifulSoup
 
-# Assuming OpenAI's client is correctly set up with the API key stored in Streamlit's secrets
-#api_key = "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"
+
 
 
 
