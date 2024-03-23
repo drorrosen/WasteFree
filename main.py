@@ -22,6 +22,7 @@ with st.sidebar:
     st.subheader('Client Information')
     #submit the information
     api_key = st.text_input("OpenAI API Key")
+    openai_model = st.selectbox("OpenAI Model", ["gpt-3.5-turbo", "gpt-4"])
     ads_choice = st.selectbox("Select ad category:", ["WasteFree", "Salon"])
 
     if ads_choice == "Salon":
@@ -32,6 +33,7 @@ with st.sidebar:
 
 
     st.session_state['api_key'] = api_key
+    st.session_state['openai_model'] = openai_model
 
 if st.button('Generate Ad'):
 
@@ -76,5 +78,4 @@ if st.button('Generate Ad'):
         )
 
         response = st.write_stream(stream)
-
 
